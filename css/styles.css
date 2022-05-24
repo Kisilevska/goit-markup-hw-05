@@ -722,13 +722,6 @@ margin-bottom: 50px;
 
 }
 
-.project-text {
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-
 .project {
     
     padding: 20px 24px;
@@ -736,6 +729,10 @@ margin-bottom: 50px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid  #EEEEEE;
     border-left: 1px solid  #EEEEEE;
+}
+.project-overlay {
+    position: relative;
+    overflow: hidden;
 }
 .content-overlay {
     position: absolute;
@@ -752,18 +749,14 @@ margin-bottom: 50px;
 
     background-color: rgba(33, 150, 243, 0.9);
 
-    opacity: 0;
+   /* opacity: 0;*/
     transform: translateY(100%);
     transition: var(--duration), var(--timing-function);
 }
 
 .project-link:hover .content-overlay,
 .project-link:focus .content-overlay {
-    transform: translateY(100%); 
-    opacity: 1;
+    transform: translateY(-100%); 
+/*opacity: 1;*/
 }
 
-.project-overlay {
-    position: relative;
-    overflow: hidden;
-}
