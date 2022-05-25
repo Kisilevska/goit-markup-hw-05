@@ -36,6 +36,9 @@ img {
 
 .link {
     text-decoration: none;
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .list {
@@ -67,10 +70,6 @@ img {
 .link:hover,
 .link:focus {
     color: var(--accent-color);
-
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
-
 }
 
 .container{
@@ -98,11 +97,12 @@ img {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+
+    margin-right: 93px;
 }
 .logo-dark {
     color: var(--title-text-color);
 
-    margin-right: 93px;
 }
 
 .nav-list,
@@ -158,12 +158,14 @@ img {
     margin-right: 10px;
 
     fill: var(--primary-text-color);
+
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 .link:hover .icom-contact,
 .link:focus .icom-contact {
     fill: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 /*=======Модальное окно======*/
@@ -177,7 +179,7 @@ img {
 
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
+    transition: opacity var(--duration) var(--timing-function), visibility var(--duration) var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -199,7 +201,7 @@ img {
     border-radius: 4px;
 
 
-    transition: transform 300ms cubic-bezier(1, -0.06, 0.58, 1) 200ms, opacity 300ms ease-in-out 200ms;
+    transition: transform var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function);
 }
 
 .modal-btn {
@@ -218,6 +220,8 @@ img {
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    cursor: pointer;
 }
 
 .backdrop.is-hidden .modal-wrapper {
@@ -275,6 +279,8 @@ img {
     color: currentColor;
     background-color: var(--accent-color);
 
+    cursor: pointer;
+
     color: var(--primary-white-color);
     padding: 10px 32px;
     
@@ -283,13 +289,14 @@ img {
 
     margin-left: auto;
     margin-right: auto;
+
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 .btn-hero:hover,
 .btn-hero:focus {
     background: #188CE8;
-
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 
@@ -459,6 +466,10 @@ justify-content: center;
     background-color: #FFFFFF;
 
     border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .social-link:hover,
@@ -501,24 +512,28 @@ justify-content: center;
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .clients-icom {
     fill: #AFB1B8;
+
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .clients-link:hover,
 .clients-link:focus {
     border-color: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 .clients-link:hover .clients-icom,
 .clients-link:focus .clients-icom{
     fill: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 /*Подвал*/
 
@@ -599,13 +614,15 @@ justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);;
 
     border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .join-link:hover,
 .join-link:focus {
     background-color: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
  
 .join-icom {
@@ -614,8 +631,6 @@ justify-content: center;
 .join-link:hover .social-icom,
 .join-link:focus .social-icom {
     fill: #FFFFFF;
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 
@@ -660,14 +675,16 @@ margin-bottom: 50px;
     background-color: #F5F4FA;
     color: var(--title-text-color);
     cursor: pointer;
+
+    transition-property: background-color color box-shadow;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
     background-color: #2196F3;
     color: var(--primary-white-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 1px 2px rgba(0, 0, 0, 0.08), 
@@ -699,8 +716,6 @@ margin-bottom: 50px;
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
                 1px 4px 6px rgba(0, 0, 0, 0.16);
 
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 
@@ -750,14 +765,12 @@ margin-bottom: 50px;
 
     background-color: rgba(33, 150, 243, 0.9);
 
-    opacity: 0;
     transform: translateY(100%);
-    transition: transform var(--duration) var(--timing-function), opasity var(--duration) var(--timing-function)
+    transition: transform var(--duration) var(--timing-function);
 }
 
 .project-link:hover .content-overlay,
 .project-link:focus .content-overlay {
     transform: translateY(0%); 
-    opacity: 1;
 }
 
